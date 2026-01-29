@@ -25,6 +25,7 @@ const hostname = 'localhost'
 const port = 3001
 
 const server = createServer((req, res) => {
+   res.setHeader('Access-Control-Allow-Origin', '*')
    res.setHeader('Content-type', 'application/json')
    res.statusCode = 200
    res.end(mockData)
